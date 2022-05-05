@@ -1,11 +1,11 @@
 {
-	"name": "Bottus",
-	"description": " Whatsapp bot.",
+	"name": "LUCII-BOT",
+	"description": " LUCII-BOT.",
 	"keywords": [
 		"whatsapp",
 		"bot"
 	],
-	"repository": "https://github.com/lyfe0010/whatsapp-bot-md",
+	"repository": "PROSSIMAMENTE",
 	"stack": "container",
 	"env": {
 		"ALWAYS_ONLINE": {
