@@ -11,7 +11,7 @@ const {
 const { VERSION } = require('../config')
 bot.addCommand(
 	{
-		pattern: 'panel ?(.*)',
+		pattern: 'menu ?(.*)',
 		fromMe: true,
 		dontAddCommandList: true,
 	},
