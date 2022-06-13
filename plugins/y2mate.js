@@ -29,16 +29,19 @@ bot(
 				quoted: message.data,
 			})
 		const vid = ytIdRegex.exec(match)
-		const { title, video } = await y2mate.get(vid[1])
+		const { title, video, thumbnail } = await y2mate.get(vid[1])
 		const buttons = []
 		for (const q in video)
-			buttons.push({ text: q, id: `ytv y2mate;${q};${vid[1]}` })
+			buttons.push({
+				text: `${q}(${video[q].fileSizeH})`,
+				id: `ytv y2mate;${q};${vid[1]}`,
+			})
 		if (!buttons.length)
 			return await message.sendMessage('*Not found*', {
 				quoted: message.quoted,
 			})
 		return await message.sendMessage(
-			await genButtonMessage(buttons, title, ''),
+			await genButtonMessage(buttons, title, '', { image: thumbnail }, message),
 			{},
 			'button'
 		)
@@ -54,16 +57,14 @@ bot(
 	},
 	async (message, match) => {
 		match = match || message.reply_message.text
-		if (!match) return await message.sendMessage('_Example : yta url_')
-		if (!ytIdRegex.test(match))
-			return await message.sendMessage('*Give me a yt link!*', {
-				quoted: message.data,
-			})
+		if (!match)
+			return await message.sendMessage('_Example : yta darari/yt url_')
 		const vid = ytIdRegex.exec(match)
-		const audio = await y2mate.get(vid[1])
-		const video = await yts((vid && vid[1]) || match)
-		const { author, title, metadata } = video[0]
-		const result = await y2mate.dl(vid[1], 'audio')
+		if (vid) match = vid[1]
+		const audio = await y2mate.get()
+		const [video] = await yts(match, !!vid)
+		const { title, thumbnail, metadata, id } = video
+		const result = await y2mate.dl(id, 'audio')
 		const { buffer } = await getBuffer(result)
 		if (!buffer)
 			return await message.sendMessage(result, { quoted: message.data })
@@ -71,9 +72,9 @@ bot(
 			await addAudioMetaData(
 				buffer,
 				title,
-				author,
 				'',
-				metadata.thumbnails[0].url.split('?')[0]
+				'',
+				(thumbnail && thumbnail.url) || (metadata && metadata.thumbnails[0].url)
 			),
 			{ quoted: message.data, mimetype: 'audio/mpeg' },
 			'audio'

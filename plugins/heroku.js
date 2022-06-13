@@ -6,17 +6,27 @@ const heroku = new Heroku({ token: Config.HEROKU_API_KEY })
 const baseURI = '/apps/' + Config.HEROKU_APP_NAME
 
 bot(
-	{ pattern: 'restart', fromMe: true, desc: 'Restart Dyno', type: 'heroku' },
+	{
+		pattern: 'restart',
+		fromMe: true,
+		desc: 'Restart Dyno',
+		type: 'heroku',
+	},
 	async (message, match) => {
 		await message.sendMessage(`_Restarting_`)
 		await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-			await message.sendMessage(error)
+			await message.sendMessage(`HEROKU : ${error.body.message}`)
 		})
 	}
 )
 
 bot(
-	{ pattern: 'shutdown', fromMe: true, desc: 'Dyno off', type: 'heroku' },
+	{
+		pattern: 'shutdown',
+		fromMe: true,
+		desc: 'Dyno off',
+		type: 'heroku',
+	},
 	async (message, match) => {
 		await heroku
 			.get(baseURI + '/formation')
@@ -29,13 +39,18 @@ bot(
 				})
 			})
 			.catch(async (error) => {
-				await message.sendMessage(error)
+				await message.sendMessage(`HEROKU : ${error.body.message}`)
 			})
 	}
 )
 
 bot(
-	{ pattern: 'dyno', fromMe: true, desc: 'Show Quota info', type: 'heroku' },
+	{
+		pattern: 'dyno',
+		fromMe: true,
+		desc: 'Show Quota info',
+		type: 'heroku',
+	},
 	async (message, match) => {
 		try {
 			heroku
@@ -58,7 +73,7 @@ Remaning    : ${secondsToHms(remaining)}`
 					await message.sendMessage('```' + quota + '```')
 				})
 				.catch(async (error) => {
-					await message.sendMessage(error)
+					return await message.sendMessage(`HEROKU : ${error.body.message}`)
 				})
 		} catch (error) {
 			await message.sendMessage(error)
@@ -89,7 +104,7 @@ bot(
 				await message.sendMessage(`_${key.toUpperCase()}: ${value}_`)
 			})
 			.catch(async (error) => {
-				await message.sendMessage(error)
+				await message.sendMessage(`HEROKU : ${error.body.message}`)
 			})
 	}
 )
@@ -118,7 +133,7 @@ bot(
 				await message.sendMessage(`_${key} not found_`)
 			})
 			.catch(async (error) => {
-				await message.sendMessage(error)
+				await message.sendMessage(`HEROKU : ${error.body.message}`)
 			})
 	}
 )
@@ -144,13 +159,18 @@ bot(
 				await message.sendMessage(`${key} not found`)
 			})
 			.catch(async (error) => {
-				await message.sendMessage(error)
+				await message.sendMessage(`HEROKU : ${error.body.message}`)
 			})
 	}
 )
 
 bot(
-	{ pattern: 'allvar', fromMe: true, desc: 'Heroku all env', type: 'heroku' },
+	{
+		pattern: 'allvar',
+		fromMe: true,
+		desc: 'Heroku all env',
+		type: 'heroku',
+	},
 	async (message, match) => {
 		let msg = '```Here your all Heroku vars\n\n\n'
 		heroku
@@ -162,13 +182,18 @@ bot(
 				return await message.sendMessage(msg + '```')
 			})
 			.catch(async (error) => {
-				await message.sendMessage(error)
+				await message.sendMessage(`HEROKU : ${error.body.message}`)
 			})
 	}
 )
 
 bot(
-	{ pattern: 'update$', fromMe: true, desc: 'Check new updates.' },
+	{
+		pattern: 'update$',
+		fromMe: true,
+		desc: 'Check new updates.',
+		type: 'heroku',
+	},
 	async (message, match) => {
 		const update = await isUpdate()
 		if (!update.length) return await message.sendMessage('*Bot is up-to-date.*')
@@ -181,6 +206,7 @@ bot(
 		pattern: 'update now$',
 		fromMe: true,
 		desc: 'To-Up-Date bot.',
+		type: 'heroku',
 	},
 	async (message, match) => {
 		const isupdate = await isUpdate()
@@ -189,7 +215,8 @@ bot(
 				'*Bot is up-to-date.*\n*Nothing to Update.*'
 			)
 		await message.sendMessage('_Updating..._')
-		await updateNow()
+		const e = await updateNow()
+		if (e) return await message.sendMessage(e)
 		return await message.sendMessage('_Updated_')
 	}
 )
