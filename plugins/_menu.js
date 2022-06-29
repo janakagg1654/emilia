@@ -23,6 +23,7 @@ bot.addCommand(
 
 ╭────────────────
 │ Prefix : ${PREFIX}
+│ Owner : ${Cʏʙᴇʀ ᴅᴀʀᴋ}
 │ User : ${message.pushName}
 │ Time : ${date.toLocaleTimeString()}
 │ Day : ${date.toLocaleString('en', { weekday: 'long' })}
@@ -94,9 +95,10 @@ bot.addCommand(
 
 		let msg =
 			'```' +
-			`╭═══ LEVANTER ═══⊷
+			`╭═══  ═══⊷
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
+┃❃│ Owner : ${Cʏʙᴇʀ ᴅᴀʀᴋ}
 ┃❃│ User : ${message.pushName}
 ┃❃│ Time : ${date.toLocaleTimeString()}
 ┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
