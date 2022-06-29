@@ -5,7 +5,7 @@
 		"whatsapp",
 		"bot"
 	],
-	"repository": "https://github.com/lyfe0010/whatsapp-bot-md",
+	"repository": "https://github.com/CYBER-DARK-YT/whatsapp-bot-md",
 	"stack": "container",
 	"env": {
 		"ALWAYS_ONLINE": {
@@ -36,7 +36,7 @@
 		"STICKER_PACKNAME": {
 			"description": "sticker pack info",
 			"required": true,
-			"value": "❤️,LyFE"
+			"value": "❤️,dark"
 		},
 		"HEROKU_APP_NAME": {
 			"description": "Heroku app name, same as above entered",
