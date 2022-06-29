@@ -95,7 +95,7 @@ bot.addCommand(
 
 		let msg =
 			'```' +
-			`╭═══  ═══⊷
+			`╭═══ DARK BOT ═══⊷
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
 ┃❃│ owner : ${Cyber dark}
