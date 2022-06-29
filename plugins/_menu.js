@@ -98,7 +98,7 @@ bot.addCommand(
 			`╭═══  ═══⊷
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
-┃❃│ Owner : ${Cʏʙᴇʀ ᴅᴀʀᴋ}
+┃❃│ owner : ${Cyber dark}
 ┃❃│ User : ${message.pushName}
 ┃❃│ Time : ${date.toLocaleTimeString()}
 ┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
@@ -107,7 +107,7 @@ bot.addCommand(
 ┃❃│ Plugins : ${PLUGINS.count}
 ┃❃│ Ram : ${getRam()}
 ┃❃│ Uptime : ${getUptime('t')}
-┃❃╰───────────────
+┃╰───────────────
 ╰═════════════════⊷
 ` +
 			'```'
