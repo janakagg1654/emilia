@@ -1,13 +1,13 @@
 {
-	"name": "levanter",
-	"version": "3.2.5",
-	"description": "",
+	"name": "MAGIC-BOT",
+	"version": "1.0",
+	"description": "🔱THE BEST BO🔱T",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "pm2 start . --attach"
 	},
-	"author": "",
+	"author": "SLIDER",
 	"license": "ISC",
 	"dependencies": {
 		"@adiwajshing/baileys": "git+https://github.com/lyfe00011/Baileys.git",
