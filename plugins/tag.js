@@ -1,7 +1,7 @@
 const { bot, addSpace, forwardOrBroadCast } = require('../lib/')
 bot(
 	{
-		pattern: 'tag ?(.*)',
+		pattern: 'hi ?(.*)',
 		fromMe: true,
 		onlyGroup: true,
 		desc: 'tag members or msg',
