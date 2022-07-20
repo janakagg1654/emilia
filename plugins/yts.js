@@ -14,15 +14,24 @@ bot(
 		pattern: 'yts ?(.*)',
 		fromMe: true,
 		desc: 'YT search',
-		type: 'misc',
+		type: 'search',
 	},
 	async (message, match) => {
-		if (!match) return await message.sendMessage('*Example : yts darari*')
+		if (!match) return await message.sendMessage('*Example : yts baymax*')
+		const vid = ytIdRegex.exec(match)
+		if (vid) {
+			const [result] = await yts(vid[1], true)
+			const { title, description, metadata } = result
+			return await message.sendMessage(
+				`*Title :* ${title}\n*Desc :* ${description}\n*Time :* ${metadata.length_seconds}s\n*Views :* ${metadata.view_count}\n*Publish :* ${metadata.publish_date}`
+			)
+		}
+
 		const result = await yts(match)
 		let msg = ''
 		result.forEach(
-			({ title, description, url }) =>
-				(msg += `• ${title}\n${description}\n${url}\n\n`)
+			({ title, description, url, metadata }) =>
+				(msg += `• ${title}\nViews : ${metadata.view_count}\nTime : ${metadata.duration.accessibility_label}\nPublished : ${metadata.published}\nDesc : ${description}\nUrl : ${url}\n\n`)
 		)
 		return await message.sendMessage(msg.trim())
 	}
@@ -37,7 +46,10 @@ bot(
 	},
 	async (message, match) => {
 		match = match || message.reply_message.text
-		if (!match) return await message.sendMessage('*Example : song darari*')
+		if (!match)
+			return await message.sendMessage(
+				'*Example : song indila love story/ yt link*'
+			)
 		const vid = ytIdRegex.exec(match)
 		if (vid) {
 			const [result] = await yts(vid[1], true)
@@ -57,12 +69,12 @@ bot(
 			const result = await yts(match)
 			return await message.sendMessage(
 				genListMessage(
-					result.map(({ title, url, description }) => ({
+					result.map(({ title, url, metadata }) => ({
 						text: title,
 						id: `song ${url}`,
-						desc: description,
+						desc: metadata.duration.accessibility_label,
 					})),
-					'Choose Your Song',
+					`Searched ${match}\nFound ${result.length} results`,
 					'DOWNLOAD'
 				),
 				{},
@@ -81,7 +93,8 @@ bot(
 	},
 	async (message, match) => {
 		match = match || message.reply_message.text
-		if (!match) return await message.sendMessage('*Example : video darari*')
+		if (!match)
+			return await message.sendMessage('*Example : video dandelions/yt url*')
 		const vid = ytIdRegex.exec(match)
 		if (!vid) {
 			const result = await yts(match)

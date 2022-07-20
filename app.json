@@ -51,10 +51,25 @@
 			"required": true,
 			"value": "null"
 		},
-		"LANG": {
+		"LANGUAG": {
 			"description": "Default Language for tts or trt",
 			"required": false,
 			"value": "en"
+		},
+		"WARN_LIMIT": {
+			"description": "Maximum number of wanings to a person.",
+			"required": false,
+			"value": "3"
+		},
+		"FORCE_LOGOUT": {
+			"description": "In Some scenario have to logout web, Only such case make this true and back to false after logout.",
+			"required": false,
+			"value": "false"
+		},
+		"DISABLE_BOT": {
+			"description": "Example : jid,jid,... where bot not works in both ways.",
+			"required": false,
+			"value": "null"
 		}
 	},
 	"addons": [

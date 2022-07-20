@@ -5,6 +5,7 @@ const {
 	setPlugin,
 	pluginsList,
 	delPlugin,
+	genButtonMessage,
 } = require('../lib/')
 const { writeFileSync, unlinkSync } = require('fs')
 const got = require('got')
@@ -19,7 +20,7 @@ bot(
 	async (message, match) => {
 		match = match || message.reply_message.text
 		if (!match && match !== 'list')
-			return await message.sendMessage('*Example : plugin url*')
+			return await message.sendMessage('*Example :*\nplugin url\nplugin list')
 		if (match == 'list') {
 			const plugins = await getPlugin()
 			if (!plugins) return await message.sendMessage(`*Plugins not installed*`)
@@ -69,7 +70,10 @@ bot(
 		type: 'misc',
 	},
 	async (message, match) => {
-		if (!match) return await message.sendMessage('*Example : remove mforward*')
+		if (!match)
+			return await message.sendMessage(
+				'*Example :*\nremove mforward\nremove all'
+			)
 		if (match == 'all') {
 			await delPlugin()
 			return await message.sendMessage(
@@ -79,8 +83,15 @@ bot(
 		const isDeleted = await delPlugin(match)
 		if (!isDeleted)
 			return await message.sendMessage(`*Plugin ${match} not found*`)
-		delete require.cache[require.resolve('./' + match + '.js')]
+		delete require.cache[require.resolve('../plugins/' + match + '.js')]
 		unlinkSync('./plugins/' + match + '.js')
-		return await message.sendMessage('_Plugin Deleted_\n*Restart BOT*')
+		return await message.sendMessage(
+			await genButtonMessage(
+				[{ text: 'RESTART NOW', id: 'restart' }],
+				'_Plugin Deleted_'
+			),
+			{},
+			'button'
+		)
 	}
 )
