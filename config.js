@@ -7,7 +7,7 @@ const DATABASE_URL =
 		? './database.db'
 		: process.env.DATABASE_URL
 module.exports = {
-	VERSION: '3.2.5',
+	VERSION: require('./package.json').version,
 	SESSION_ID: (process.env.SESSION_ID || '').trim(),
 	DATABASE:
 		DATABASE_URL === './database.db'
@@ -31,7 +31,7 @@ module.exports = {
 	HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
 	HEROKU_API_KEY: process.env.HEROKU_API_KEY,
 	BRANCH: 'master',
-	STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
+	STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,Floki Bhai',
 	ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
 	LOG_MSG: toBool(process.env.LOG_MSG) || false,
 	RMBG_KEY: process.env.RMBG_KEY || 'null',
@@ -41,4 +41,5 @@ module.exports = {
 	FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT),
 	BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
 	DIS_BOT: process.env.DISABLE_BOT || 'null',
+	ANTILINK_MSG: process.env.ANTILINK_MSG || '_لِنڪ موڪلڻ منع آھي ، رِيمُووَ_',
 }
