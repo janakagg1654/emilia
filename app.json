@@ -36,7 +36,7 @@
 		"STICKER_PACKNAME": {
 			"description": "sticker pack info",
 			"required": true,
-			"value": "❤️,LyFE"
+			"value": "❤️,Floki Bhai"
 		},
 		"HEROKU_APP_NAME": {
 			"description": "Heroku app name, same as above entered",
@@ -70,6 +70,11 @@
 			"description": "Example : jid,jid,... where bot not works in both ways.",
 			"required": false,
 			"value": "null"
+		},
+		"ANTILINK_MSG": {
+			"description": "Message send when antilink and action is kick.",
+			"required": false,
+			"value": "_لِنڪ موڪلڻ منع آھي ، رِيمُووَ_"
 		}
 	},
 	"addons": [
