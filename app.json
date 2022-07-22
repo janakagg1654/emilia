@@ -74,7 +74,7 @@
 		"ANTILINK_MSG": {
 			"description": "Message send when antilink and action is kick.",
 			"required": false,
-			"value": "_لِنڪ موڪلڻ منع آھي ، رِيمُووَ_"
+			"value": "_لِنڪ موڪلڻ منع آھي، رِيمُووَ_"
 		}
 	},
 	"addons": [
