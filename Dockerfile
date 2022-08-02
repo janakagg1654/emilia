@@ -1,5 +1,5 @@
-FROM quay.io/lyfe00011/md:beta
-RUN git clone https://github.com/lyfe00011/whatsapp-bot-md.git /root/LyFE/
-WORKDIR /root/LyFE/
+FROM quay.io/Bashir12340/md:beta
+RUN git clone https://github.com/Bashir12340/whatsapp-bot-md.git /root/BASHIR/
+WORKDIR /root/BASHIR/
 RUN yarn install --network-concurrency 1
 CMD ["node", "index.js"]
