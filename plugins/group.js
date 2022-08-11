@@ -151,8 +151,14 @@ bot(
 		const participants = await message.groupMetadata(message.jid)
 		const isImAdmin = await isAdmin(participants, message.client.user.jid)
 		if (!isImAdmin) return await message.sendMessage(`_I'm not admin._`)
-		return await message.GroupSettingsChange(message.jid, false)
-	}
+		if (!match || isNaN(match))
+			return await message.GroupSettingsChange(message.jid, false)
+                await message.GroupSettingsChange(message.jid, false)
+		await message.sendMessage(`_Unmuted for ${match} min._`)
+		await sleep(1000 * 60 * match)
+		return await message.GroupSettingsChange(message.jid, true)
+	
+		}
 )
 
 bot(
