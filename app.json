@@ -1,5 +1,5 @@
 {
-	"name": "Bottus",
+	"name": "ENRICO",
 	"description": " Whatsapp bot.",
 	"keywords": [
 		"whatsapp",
@@ -36,7 +36,7 @@
 		"STICKER_PACKNAME": {
 			"description": "sticker pack info",
 			"required": true,
-			"value": "❤️,LyFE"
+			"value": "SID"
 		},
 		"HEROKU_APP_NAME": {
 			"description": "Heroku app name, same as above entered",
