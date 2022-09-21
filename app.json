@@ -1,5 +1,5 @@
 {
-	"name": "Bottus",
+	"name": "safari whatssap_md",
 	"description": " Whatsapp bot.",
 	"keywords": [
 		"whatsapp",
@@ -23,12 +23,12 @@
 			"required": true,
 			"value": "null"
 		},
-		"PREFIX": {
+		"PREFIX": {,
 			"description": "prefix, check for more",
 			"required": true,
 			"value": "."
 		},
-		"SESSION_ID": {
+		"SESSION_ID": {21_9_927a_4a12_7aa2
 			"description": "session id",
 			"required": true,
 			"value": ""
