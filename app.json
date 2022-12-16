@@ -16,7 +16,7 @@
 		},
 		"SUDO": {
 			"description": "admin",
-			"required": false,
+			"required": true,
 			"value": "null"
 		},
 		"PREFIX": {
@@ -32,7 +32,7 @@
 		"STICKER_PACKNAME": {
 			"description": "sticker pack info",
 			"required": false,
-			"value": "❤️,LyFE"
+			"value": "frank,Gaitho"
 		},
 		"HEROKU_APP_NAME": {
 			"description": "Heroku app name, same as above entered.",
