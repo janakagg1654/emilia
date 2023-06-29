@@ -96,7 +96,7 @@ bot.addCommand(
 			'```' +
 			`╭═══ LEVANTER ═══⊷
 ┃❃╭──────────────
-┃❃│ Prefix : ${PREFIX}
+┃❃│ Prefix : ${PREFIX} https://i.imgur.com/9yQMLtK.jpg
 ┃❃│ User : ${message.pushName}
 ┃❃│ Time : ${date.toLocaleTimeString()}
 ┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
