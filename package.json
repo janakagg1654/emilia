@@ -1,10 +1,10 @@
 {
-	"name": "levanter",
+	"name": "⚡Sheckie⚡r",
 	"version": "4.5.6",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "pm2 start . --attach --namespace levanter --name levanter",
+		"start": "pm2 start . --attach --namespace ⚡Sheckie⚡ --name ⚡Sheckie⚡",
 		"stop": "pm2 stop levanter"
 	},
 	"author": "",
