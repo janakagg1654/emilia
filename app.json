@@ -35,7 +35,7 @@
 		"STICKER_PACKNAME": {
 			"description": "sticker pack info",
 			"required": false,
-			"value": "❤️,LyFE"
+			"value": "❤️,ᴅᴀʀᴋʟᴇᴇ"
 		},
 		"HEROKU_APP_NAME": {
 			"description": "Heroku app name, same as above entered.",
@@ -103,7 +103,7 @@
 		"AUTO_STATUS_VIEW": {
 			"description": "view others status",
 			"required": false,
-			"value": "false"
+			"value": "true"
 		},
 		"SEND_READ": {
 			"description": "send blue tick",
