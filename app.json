@@ -1,6 +1,6 @@
 {
-	"name": "levanter@4.4.1",
-	"description": "",
+	"name": "TERIUS",
+	"description": "TERIUS IS THE DOMINATOR",
 	"keywords": [
 		"noedjs"
 	],
@@ -20,7 +20,7 @@
 		"SUDO": {
 			"description": "admin",
 			"required": false,
-			"value": ""
+			"value": "2349047646214"
 		},
 		"PREFIX": {
 			"description": "prefix, check for more",
@@ -35,7 +35,7 @@
 		"STICKER_PACKNAME": {
 			"description": "sticker pack info",
 			"required": false,
-			"value": "❤️,LyFE"
+			"value": "TERIUS"
 		},
 		"HEROKU_APP_NAME": {
 			"description": "Heroku app name, same as above entered.",
