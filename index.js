@@ -4,7 +4,7 @@ const { stopInstance } = require('./lib/pm2')
 
 const start = async () => {
 	try {
-		logger.info(`levanter ${VERSION}`)
+		logger.info(`TERIUS ${VERSION}`)
 		try {
 			await DATABASE.authenticate()
 		} catch (error) {
