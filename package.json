@@ -1,13 +1,13 @@
 {
-	"name": "levanter",
+	"name": "TERIUS",
 	"version": "4.6.3",
-	"description": "",
+	"description": "TERIUS IS THE DOMINATOR",
 	"main": "index.js",
 	"scripts": {
-		"start": "pm2 start . --attach --namespace levanter --name levanter",
-		"stop": "pm2 stop levanter"
+		"start": "pm2 start . --attach --namespace TERIUS --name TERIUS",
+		"stop": "pm2 stop TERIUS"
 	},
-	"author": "",
+	"author": "TERIUS",
 	"license": "ISC",
 	"dependencies": {
 		"baileys": "git+https://github.com/WhiskeySockets/Baileys.git",
