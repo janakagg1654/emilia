@@ -27,8 +27,8 @@ module.exports = {
           },
           logging: false,
         }),
-  HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
-  SUDO: process.env.SUDO || '',
+  HANDLERS: (process.env.PREFIX || '^[,]').trim(),
+  SUDO: process.env.SUDO || '254716637803',
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
@@ -37,7 +37,7 @@ module.exports = {
   LOG_MSG: toBool(process.env.LOG_MSG) || false,
   RMBG_KEY: process.env.RMBG_KEY || 'null',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
-  LANG: (process.env.LANGUAG || 'en').toLowerCase(),
+  LANG: (process.env.LANGUAG || 'en,fr').toLowerCase(),
   WARN_LIMIT: process.env.WARN_LIMIT || 3,
   FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT),
   BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
@@ -61,7 +61,8 @@ module.exports = {
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
   APPROVE: (process.env.APPROVE || '').trim(),
   ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
-  PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'null',
+  PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'hello me im hrer
+',
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
     ? toBool(process.env.DISABLE_START_MESSAGE)
     : false,
