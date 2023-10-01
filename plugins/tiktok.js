@@ -2,7 +2,7 @@ const { tiktok, bot, isUrl } = require('../lib/index')
 
 bot(
 	{
-		pattern: 'tiktok ?(.*)',
+		pattern: 'تيك ?(.*)',
 		fromMe: true,
 		desc: 'Download tiktok video',
 		type: 'download',
