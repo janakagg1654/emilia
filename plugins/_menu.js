@@ -15,7 +15,7 @@ bot.addCommand(
 ╰────────────────╯
 
 ╭────────────────
-│Owner : ᴀxᴀʟ-ᴇꜰx
+│Owner : ᴀᴊxᴀʟ-ᴇꜰx
 │Prefix : ${PREFIX}
 │ User : ${message.pushName}
 │ Time : ${date.toLocaleTimeString()}
@@ -84,9 +84,10 @@ bot.addCommand(
       }
     })
     const date = new Date()
-    let msg = `\`\`\`╭═══ LEVANTER ═══⊷
+    let msg = `\`\`\`╭═══ ᴀᴊxᴀʟ-ᴍᴅ ═══⊷
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
+┃❃│ Owner : ᴀᴊꜱᴀʟ-ᴇꜰx
 ┃❃│ User : ${message.pushName}
 ┃❃│ Time : ${date.toLocaleTimeString()}
 ┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
