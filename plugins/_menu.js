@@ -11,7 +11,7 @@ bot.addCommand(
     const sorted = bot.commands.sort((a, b) => (a, b) => a.name.localeCompare(b.name))
     const date = new Date()
     let CMD_HELP = `╭────────────────╮
-						ʟᴇᴠᴀɴᴛᴇʀ
+						ᴀᴊxᴀʟ-ᴍᴅ
 ╰────────────────╯
 
 ╭────────────────
