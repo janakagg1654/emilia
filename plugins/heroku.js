@@ -20,7 +20,7 @@ if (Config.HEROKU_API_KEY && Config.HEROKU_APP_NAME) {
 			type: 'heroku',
 		},
 		async (message, match) => {
-			await message.send(`_Restarting_`)
+			await message.send(`_Restarting ᴀxʟ-ʙᴏᴛ_`)
 			await heroku.delete(baseURI + '/dynos').catch(async (error) => {
 				await message.send(`HEROKU : ${error.body.message}`)
 			})
