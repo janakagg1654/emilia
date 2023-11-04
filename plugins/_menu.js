@@ -15,7 +15,8 @@ bot.addCommand(
 ╰────────────────╯
 
 ╭────────────────
-│ Prefix : ${PREFIX}
+│Owner : ᴀxᴀʟ-ᴇꜰx
+│Prefix : ${PREFIX}
 │ User : ${message.pushName}
 │ Time : ${date.toLocaleTimeString()}
 │ Day : ${date.toLocaleString('en', { weekday: 'long' })}
