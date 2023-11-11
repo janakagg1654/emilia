@@ -8,7 +8,12 @@ bot.addCommand(
     dontAddCommandList: true,
   },
   async (message, match) => {
-    const sorted = bot.commands.sort((a, b) => (a, b) => a.name.localeCompare(b.name))
+    const sorted = bot.commands.sort((a, b) => {
+      if (a.name && b.name) {
+        return a.name.localeCompare(b.name)
+      }
+      return 0
+    })
     const date = new Date()
     let CMD_HELP = `╭────────────────╮
 						ᴀᴊxᴀʟ-ᴍᴅ
@@ -28,18 +33,15 @@ bot.addCommand(
 ╰────────────────
 ╭────────────────
 `
-    const commands = []
-    sorted.map(async (command, index) => {
+    sorted.map(async (command, i) => {
       if (command.dontAddCommandList === false && command.pattern !== undefined) {
-        commands.push(command.name)
+        CMD_HELP += `│ ${i + 1} ${addSpace(i + 1, sorted.length)}${textToStylist(
+          command.name.toUpperCase(),
+          'mono'
+        )}\n`
       }
     })
-    commands.forEach((command, i) => {
-      CMD_HELP += `│ ${i + 1} ${addSpace(i + 1, commands.length)}${textToStylist(
-        command.toUpperCase(),
-        'mono'
-      )}\n`
-    })
+
     CMD_HELP += `╰────────────────`
     return await message.send('```' + CMD_HELP + '```')
   }
