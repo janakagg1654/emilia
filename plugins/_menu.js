@@ -16,7 +16,7 @@ bot.addCommand(
     })
     const date = new Date()
     let CMD_HELP = `╭────────────────╮
-						ʟᴇᴠᴀɴᴛᴇʀ
+						John The AI
 ╰────────────────╯
 
 ╭────────────────
@@ -85,7 +85,7 @@ bot.addCommand(
       }
     })
     const date = new Date()
-    let msg = `\`\`\`╭═══ LEVANTER ═══⊷
+    let msg = `\`\`\`--- John The AI ---
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
 ┃❃│ User : ${message.pushName}
