@@ -12,7 +12,7 @@ bot(
 		if (!cmd || (tog != 'off' && tog != 'on'))
 			return await message.send('*Example :* tog ping off')
 		if (cmd == 'tog')
-			return await message.send(`Did you really want to kill me?`)
+			return await message.send(`Sir yes sir!🫡`)
 		await TogCmd(cmd, tog)
 		await message.send(`_${cmd} ${tog == 'on' ? 'Enabled' : 'Disabled'}._`)
 	}
