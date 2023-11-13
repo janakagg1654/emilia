@@ -16,7 +16,7 @@ bot(
 		await setLydia(message.jid, match == 'on', user)
 		await message.send(
 			`_Lydia ${
-				match == 'on' ? 'Activated' : 'Deactivated'
+				match == 'on' ? 'i am on sir!' : 'I am dismissed sir!'
 			}_\n*Only works from reply msg.`
 		)
 	}
