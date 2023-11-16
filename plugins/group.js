@@ -23,11 +23,11 @@ bot(
 	async (message, match) => {
 		const participants = await message.groupMetadata(message.jid)
 		const isImAdmin = await isAdmin(participants, message.client.user.jid)
-		if (!isImAdmin) return await message.send(`_I'm not admin._`)
+		if (!isImAdmin) return await message.send(`_Njan admin allada sorry🥲._`)
 		let user = message.mention[0] || message.reply_message.jid
-		if (!user && match != 'all') return await message.send(`_Give me a user_`)
+		if (!user && match != 'all') return await message.send(`_Are ahn kick akkeende- AJXAL-MD und dont worry_`)
 		const isUserAdmin = match != 'all' && (await isAdmin(participants, user))
-		if (isUserAdmin) return await message.send(`_User is admin._`)
+		if (isUserAdmin) return await message.send(`_Aaa Vazha admin ahn da🙂...\nbut nee parnjal kick akkum🙌🏻🖤._`)
 		if (match == 'all') {
 			user = participants
 				.filter((member) => !member.admin == true)
@@ -54,7 +54,7 @@ bot(
 		const isImAdmin = await isAdmin(participants, message.client.user.jid)
 		if (!isImAdmin) return await message.send(`_I'm not admin._`)
 		match = match || message.reply_message.jid
-		if (!match) return await message.send('Example : add 91987654321')
+		if (!match) return await message.send('Example : add 919539412641')
 		// if (!match.startsWith('@@')) {
 		// 	match = jidToNum(match)
 		// 	const button = await genButtonMessage(
