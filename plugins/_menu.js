@@ -87,6 +87,7 @@ bot.addCommand(
     const date = new Date()
     let msg = `\`\`\`╭═══ LEVANTER ═══⊷
 ┃❃╭──────────────
+┃❃│ᴀᴊxᴀʟ ᴍᴅ
 ┃❃│ Prefix : ${PREFIX}
 ┃❃│ User : ${message.pushName}
 ┃❃│ Time : ${date.toLocaleTimeString()}
