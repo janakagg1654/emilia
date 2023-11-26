@@ -15,7 +15,9 @@ bot.addCommand(
       return 0
     })
     const date = new Date()
-    let CMD_HELP = `╭────────────────╮
+    let CMD_HELP = `
+    "logo": "https://wallpapercave.com/wp/wp12002210.jpg"
+    ╭────────────────╮
 						ʟᴇᴠᴀɴᴛᴇʀ
 ╰────────────────╯
 
