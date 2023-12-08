@@ -16,7 +16,7 @@ bot.addCommand(
     })
     const date = new Date()
     let CMD_HELP = `╭────────────────╮
-						CRISTIANO
+						  CRISTIANO
 ╰────────────────╯
 
 ╭────────────────
