@@ -1,0 +1,51 @@
+.plugin const { bot, parsedJid, getRandom } = require('../lib/')
+/*
+bot(
+	{
+		pattern: 'areact ?(.*)',
+		fromMe: false,
+		desc: 'auto react to messages',
+		type: 'misc',
+	},
+	async (message, match) => {
+  */
+// add jid so bot not react to message of these chat
+const not_react_jids = ``
+
+// add jid so bot react to only to message of these chat
+const react_jids = ``
+
+const not_gids = parsedJid(not_react_jids)
+const gids = parsedJid(react_jids)
+
+// set true so only react in personal chat
+const onlyPm = false
+
+// set true so only react in group chat
+const onlyGroup = false
+
+const emojis =
+  '😘,'.split(
+    ','
+  )
+
+bot({ on: 'text', fromMe: false, type: 'ar' }, async (message, match) => {
+  if (not_gids.length) {
+    if (not_gids.includes(message.jid)) return
+  }
+  if (gids.length) {
+    if (!gids.includes(message.jid)) return
+  }
+  const isReact =
+    !message.fromMe &&
+    (onlyPm ? !message.isGroup : !onlyPm) &&
+    (onlyGroup ? message.isGroup : !onlyGroup)
+
+  if (!isReact) return
+
+  const react = {
+    text: getRandom(emojis),
+    key: message.message.key,
+  }
+  return await message.send(react, {}, 'react')
+})
