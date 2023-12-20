@@ -56,15 +56,15 @@ A simple WhatsApp User bot.
 
              echo "SESSION_ID = Session_Id_you_Got_After_Scan_Dont_Add_This_Line_If_You_Can_Scan_From_Terminal_Itself
              PREFIX = .
-             STICKER_PACKNAME = LyFE
-             ALWAYS_ONLINE = false
-             RMBG_KEY = null
+             STICKER_PACKNAME = MISHAEL
+             ALWAYS_ONLINE = TRUE
+             RMBG_KEY = J6pLtr2uMgtkYVNddfq2E76D
              LANGUAG = en
              WARN_LIMIT = 3
              FORCE_LOGOUT = false
-             BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
-             MAX_UPLOAD = 200
-             REJECT_CALL = false
+             BRAINSHOP = 179621,zWqD2YdNGypX5lTo
+             MAX_UPLOAD = 500
+             REJECT_CALL = ftrue
              SUDO = 989876543210
              TZ = Asia/Kolkata
              VPS = true
