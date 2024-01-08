@@ -15,7 +15,7 @@ module.exports = {
       ? new Sequelize({
           dialect: 'sqlite',
           storage: DATABASE_URL,
-          logging: false,
+          logging: true,
         })
       : new Sequelize(DATABASE_URL, {
           dialect: 'postgres',
