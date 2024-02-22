@@ -1,7 +1,7 @@
 {
-  "name": "levanter@5.2.3",
-  "description": "",
-  "keywords": ["noedjs"],
+  "name": "lyfe@5.3.0",
+  "description": "Hello world",
+  "keywords": ["index.js"],
   "success_url": "/",
   "env": {
     "ALWAYS_ONLINE": {
