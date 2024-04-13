@@ -1,4 +1,4 @@
-### WhatsApp MD User Bot
+### Mozz - Md User Bot
 
 A simple WhatsApp User bot.
 
