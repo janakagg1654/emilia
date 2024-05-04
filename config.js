@@ -1,12 +1,12 @@
-const toBool = (x) => x == 'true'
-const { Sequelize } = require('sequelize')
-const { existsSync } = require('fs')
-const path = require('path')
-const configPath = path.join(__dirname, './config.env')
-const databasePath = path.join(__dirname, './database.db')
-if (existsSync(configPath)) require('dotenv').config({ path: configPath })
+const toBool = (x) => x === 'true'; // Adjusted to use strict comparison
+const { Sequelize } = require('sequelize');
+const { existsSync } = require('fs');
+const path = require('path');
+const configPath = path.join(__dirname, './config.env');
+const databasePath = path.join(__dirname, './database.db');
+if (existsSync(configPath)) require('dotenv').config({ path: configPath });
 const DATABASE_URL =
-  process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
+  process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL;
 module.exports = {
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '').trim(),
@@ -33,7 +33,7 @@ module.exports = {
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
   STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
-  ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
+  ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE) || true, // Default to true if not set
   LOG_MSG: toBool(process.env.LOG_MSG) || false,
   RMBG_KEY: process.env.RMBG_KEY || 'null',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
@@ -49,9 +49,9 @@ module.exports = {
   MENTION: process.env.MENTION || '',
   SS_TOKEN: process.env.SS_TOKEN || '',
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
-  REJECT_CALL: toBool(process.env.REJECT_CALL),
+  REJECT_CALL: toBool(process.env.REJECT_CALL) || true, // Default to true if not set
   VPS: toBool(process.env.VPS),
-  AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
+  AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'true').trim(), // Default to true if not set
   SEND_READ: toBool(process.env.SEND_READ),
   KOYEB: toBool(process.env.KOYEB),
   KOYEB_NAME: (process.env.KOYEB_NAME || '').trim(),
@@ -60,7 +60,7 @@ module.exports = {
   GPT: (process.env.GPT || 'free').trim(),
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
   APPROVE: (process.env.APPROVE || '').trim(),
-  ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
+  ANTI_DELETE: toBool(process.env.ANTI_DELETE) || true, // Default to true if not set
   PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'null',
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
     ? toBool(process.env.DISABLE_START_MESSAGE)
@@ -77,4 +77,4 @@ module.exports = {
   DELETE_TYPE: (process.env.DELETE_TYPE || '').trim(),
   LIST_TYPE: (process.env.LIST_TYPE || 'poll').trim(),
   BING_COOKIE: (process.env.BING_COOKIE || '').trim(),
-}
+};
