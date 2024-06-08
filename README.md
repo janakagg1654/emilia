@@ -53,14 +53,14 @@ A simple WhatsApp User bot.
                yarn install --network-concurrency 1
 
        - Enter Environment Variables: Copy-paste the lines below (remove SESSION_ID if not needed):
-
-             echo "SESSION_ID = Session_Id_you_Got_After_Scan_Dont_Add_This_Line_If_You_Can_Scan_From_Terminal_Itself
+             echo "SESSION_ID = 8_6_ef34_670a_3186
              PREFIX = .
              STICKER_PACKNAME = LyFE
              ALWAYS_ONLINE = false
              RMBG_KEY = null
              LANGUAG = en
-             WARN_LIMIT = 3
+             WARN_LIMIT = 2
+     
              FORCE_LOGOUT = false
              BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
              MAX_UPLOAD = 200
