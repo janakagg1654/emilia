@@ -6,8 +6,8 @@
   "env": {
     "ALWAYS_ONLINE": {
       "description": "show bot number last seen as online",
-      "required": false,
-      "value": "false"
+      "required": true,
+      "value": "true"
     },
     "LOG_MSG": {
       "description": "Show whatsapp msgs in log",
@@ -27,7 +27,7 @@
     "SESSION_ID": {
       "description": "session id",
       "required": true,
-      "value": ""
+      "value": "29_6_6170_03be_aa6e,29_6_8a74_5ad0_2c70"
     },
     "STICKER_PACKNAME": {
       "description": "sticker pack info",
