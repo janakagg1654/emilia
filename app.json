@@ -7,7 +7,7 @@
     "ALWAYS_ONLINE": {
       "description": "show bot number last seen as online",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "LOG_MSG": {
       "description": "Show whatsapp msgs in log",
@@ -17,7 +17,7 @@
     "SUDO": {
       "description": "admin",
       "required": false,
-      "value": ""
+      "value": "923436062975"
     },
     "PREFIX": {
       "description": "prefix, check for more",
@@ -27,7 +27,7 @@
     "SESSION_ID": {
       "description": "session id",
       "required": true,
-      "value": ""
+      "value": "29_6_6170_03be_aa6e"
     },
     "STICKER_PACKNAME": {
       "description": "sticker pack info",
@@ -105,7 +105,7 @@
     "SEND_READ": {
       "description": "send blue tick",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "AJOIN": {
       "description": "Accept Group join request(Group privacy)",
